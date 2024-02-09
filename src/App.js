@@ -45,12 +45,12 @@ function App() {
   const [dataTes, setDataTes] = useState([]);
 
   const handleDoctors = async () => {
-    const data = await axios.get(`http://localhost:8080/doctor?city=${city?city:cityIP}`);
+    const data = await axios.get(`https://fixhealth-ml9u.onrender.com/doctor?city=${city?city:cityIP}`);
     console.log(data);
     setDataDoc(data.data);
   };
   const handleTestiminials = async () => {
-    const data = await axios.get("http://localhost:8080/testimonials");
+    const data = await axios.get("https://fixhealth-ml9u.onrender.com/testimonials");
     setDataTes(data.data);
   };
 
